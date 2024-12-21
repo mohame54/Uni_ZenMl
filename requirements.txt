@@ -1,0 +1,6 @@
+zenml[server]==0.71.0
+mlflow
+pyarrow
+flask
+torch== 2.5.1
+dagshub

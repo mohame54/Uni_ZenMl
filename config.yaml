@@ -1,0 +1,18 @@
+settings:
+  docker:
+    parent_image: "huggingface/transformers-pytorch-cpu"
+    skip_build: True
+    requirements: requirements.txt
+    environment:
+      WANDB_DISABLED: "true"
+  # Uncomment the following lines to specify the accelerator for your azureml orchestrator
+#  orchestrator.azureml:
+#    mode: "compute-instance"
+#    compute_name: compute_name   # Insert the name of your preconfigured compute instance
+
+# Model Control Plane configuration
+model:
+  name: Resnet18_best_model
+  description: Model to give a probability of a given image being a normal respiratory system or a pneumonia infected respiratory system
+  tags: ["Resnet18"]
+
